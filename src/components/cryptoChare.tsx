@@ -12,6 +12,7 @@ import {
   Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
+import { CoreLoader } from "./CoreLoader";
 
 ChartJS.register(
   CategoryScale,
@@ -34,9 +35,10 @@ export default function CoinChart({ coinId, vs_currency, days }: Props) {
     id: coinId,
     vs_currency,
     days,
+    interval: "daily",
   });
 
-  if (isLoading) return <p>Loading chart...</p>;
+  if (isLoading) return <CoreLoader />;
   if (error || !data) return <p>Error loading chart data</p>;
 
   const labels = data.prices.map((p) => {
