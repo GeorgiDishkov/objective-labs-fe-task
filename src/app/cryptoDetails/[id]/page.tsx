@@ -3,7 +3,6 @@
 import { CoreLoader } from "@/components/CoreLoader";
 import CoinChart from "@/components/cryptoChare";
 import { useGetAssetByIdQuery } from "@test_objectlabs_lib/coincap-sdk";
-import Image from "next/image";
 import { useParams } from "next/navigation";
 
 export default function CryptoDetailsPage() {
@@ -36,9 +35,9 @@ export default function CryptoDetailsPage() {
   return (
     <div className="max-w-3xl mx-auto mt-10 p-6 bg-[#0a0f0a] rounded-xl shadow-lg border border-[#39ff14] animate-glow">
       <div className="flex items-center gap-4 mb-6">
-        <Image
-          src={image as string}
-          alt={name as string}
+        <img
+          src={image}
+          alt={name}
           className="w-16 h-16 rounded-full transform hover:rotate-[30deg] transition-transform duration-1000"
         />
         <div>

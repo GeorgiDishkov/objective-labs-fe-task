@@ -1,7 +1,6 @@
 "use client";
 
 import { CoinMarketResponse } from "@test_objectlabs_lib/coincap-sdk";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 type Props = {
@@ -22,10 +21,9 @@ export default function AssetRow({ asset }: Props) {
     >
       <td className="p-3 flex items-center gap-3">
         <div className="w-8 h-8 rounded-full overflow-hidden">
-          <Image
+          <img
             src={asset.image}
             alt={asset.name}
-            loading="lazy"
             className="w-full h-full transform transition-transform duration-700 group-hover:rotate-[30deg] group-hover:scale-110"
           />
         </div>
