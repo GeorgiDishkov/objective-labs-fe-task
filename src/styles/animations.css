@@ -1,0 +1,19 @@
+@layer components {
+  @keyframes glowPulse {
+    0% {
+      box-shadow: 0 0 0px #39ff14;
+    }
+    50% {
+      box-shadow: 0 0 12px #39ff14, 0 0 24px #39ff14;
+    }
+    100% {
+      box-shadow: 0 0 0px #39ff14;
+    }
+  }
+
+  .glow-border {
+    animation: glowPulse 2.5s infinite ease-in-out;
+    border-radius: 12px;
+    border: 1px solid #39ff14;
+  }
+}
